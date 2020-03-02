@@ -6,19 +6,13 @@
           <router-link exact-active-class="active" to="/">Home</router-link>
         </div>
         <div>
-          <router-link exact-active-class="active" to="/about"
-            >About</router-link
-          >
+          <router-link exact-active-class="active" to="/about">About</router-link>
         </div>
         <div>
-          <router-link exact-active-class="active" to="/projects"
-            >Projects</router-link
-          >
+          <router-link exact-active-class="active" to="/projects">Projects</router-link>
         </div>
         <div class="button">
-          <router-link exact-active-class="active" to="/contact"
-            >Contact</router-link
-          >
+          <router-link exact-active-class="active" to="/contact">Contact</router-link>
         </div>
       </div>
     </div>
@@ -62,22 +56,22 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   data() {
     return {
-      lat: '',
-      long: '',
+      lat: "",
+      long: "",
       weatherData: {
-        main: '',
-        weather: ''
+        main: "",
+        weather: ""
       },
       loading: false
     };
   },
   watch: {
-    'weatherData.main': {
+    "weatherData.main": {
       deep: true,
       handler(x) {
         if (x.temp) {
@@ -104,7 +98,7 @@ export default {
   },
   methods: {
     async showPosition(position) {
-      let key = 'e8e569135b11f4e02b402366ae393681';
+      let key = "e8e569135b11f4e02b402366ae393681";
 
       await position.coords.latitude;
       await position.coords.longitude;
@@ -122,9 +116,9 @@ export default {
     getLocation() {
       if (navigator.geolocation) {
         let res = navigator.geolocation.getCurrentPosition(this.showPosition);
-        console.log('iii', res);
+        console.log("iii", res);
       } else {
-        alert('Geolocation is not supported by this browser');
+        alert("Geolocation is not supported by this browser");
       }
     }
   },
@@ -139,8 +133,8 @@ export default {
 
 <style scoped>
 @font-face {
-  font-family: 'Chinese';
-  src: url('../assets/Chinese.ttf');
+  font-family: "Chinese";
+  src: url("../assets/Chinese.ttf");
 }
 .container {
   background-size: cover;
@@ -165,7 +159,7 @@ export default {
   );
 }
 .container::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 50vw;
@@ -176,7 +170,7 @@ export default {
   width: 60vw;
   height: 70vh;
   background-color: #f7f7f7;
-  background-image: url('https://instagram.flos1-1.fna.fbcdn.net/v/t51.2885-15/e35/17881331_211277712695886_4765536372649885696_n.jpg?_nc_ht=instagram.flos1-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=xwX6ZOijguAAX99PlYZ&oh=c2ed88bde4c0f1b5690ddd5200df5e35&oe=5E814FE8');
+  background-image: url("https://instagram.flos1-1.fna.fbcdn.net/v/t51.2885-15/e35/17881331_211277712695886_4765536372649885696_n.jpg?_nc_ht=instagram.flos1-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=xwX6ZOijguAAX99PlYZ&oh=c2ed88bde4c0f1b5690ddd5200df5e35&oe=5E814FE8");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -188,7 +182,7 @@ export default {
   box-sizing: border-box;
 }
 .book::before {
-  content: '';
+  content: "";
   height: 1px;
   position: absolute;
   left: 0;
@@ -223,7 +217,7 @@ export default {
 }
 .gold-container::before,
 .gold-container::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 150%;
   height: 150%;
@@ -293,7 +287,7 @@ export default {
   z-index: 5;
 }
 .text {
-  font-family: 'Lato';
+  font-family: "Lato";
   font-size: 1.6rem;
   color: #2b4162;
 }
@@ -313,13 +307,13 @@ export default {
 }
 .logo-text {
   color: #947a5f;
-  font-family: 'Chinese';
+  font-family: "Chinese";
   letter-spacing: 0.1rem;
   font-size: 2rem;
   padding: 0.5rem 0;
 }
 .chinese {
-  font-family: 'Chinese';
+  font-family: "Chinese";
   font-size: 2rem;
   writing-mode: vertical-lr;
   background: #947a5f;
@@ -333,7 +327,7 @@ export default {
 }
 .text-little {
   font-size: 1rem;
-  font-family: 'Chinese';
+  font-family: "Chinese";
   letter-spacing: 1px;
 }
 .loader-bg {

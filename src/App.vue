@@ -206,4 +206,42 @@ a {
     transform: scale(1);
   }
 }
+/* @media only screen and (max-width: 1440px) {
+  body::before {
+    content: "tablet to some desktop media query (769 > 1281) fired";
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    background: rgba(255, 255, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    width: 100vw;
+    height: 100vw;
+  }
+} */
+@media only screen and (max-width: 1200px) {
+  body::before {
+    content: "Mobile still in works, visit Web";
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    background: rgba(255, 255, 0, 0.9); /* Semi-transparent yellow */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body div {
+    display: none;
+  }
+}
 </style>

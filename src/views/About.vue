@@ -102,7 +102,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.loading = true;
-    }, 3000);
+    }, 1500);
     this.randomStuff();
     if (this.random && !this.start) {
       this.start = setInterval(() => {

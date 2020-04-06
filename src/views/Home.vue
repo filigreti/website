@@ -170,7 +170,7 @@ export default {
   width: 60vw;
   height: 70vh;
   background-color: #f7f7f7;
-  background-image: url("https://instagram.flos1-1.fna.fbcdn.net/v/t51.2885-15/e35/17881331_211277712695886_4765536372649885696_n.jpg?_nc_ht=instagram.flos1-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=xwX6ZOijguAAX99PlYZ&oh=c2ed88bde4c0f1b5690ddd5200df5e35&oe=5E814FE8");
+  background-image: url("../assets/guy.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;

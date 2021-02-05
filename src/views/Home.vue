@@ -132,7 +132,7 @@ export default {
     await this.getLocation();
     setTimeout(() => {
       this.loading = true;
-    }, 10000);
+    }, 2000);
   },
 };
 </script>

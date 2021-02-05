@@ -6,13 +6,19 @@
           <router-link exact-active-class="active" to="/">Home</router-link>
         </div>
         <div>
-          <router-link exact-active-class="active" to="/about">About</router-link>
+          <router-link exact-active-class="active" to="/about"
+            >About</router-link
+          >
         </div>
         <div>
-          <router-link exact-active-class="active" to="/projects">Projects</router-link>
+          <router-link exact-active-class="active" to="/projects"
+            >Projects</router-link
+          >
         </div>
         <div class="button">
-          <router-link exact-active-class="active" to="/contact">Contact</router-link>
+          <router-link exact-active-class="active" to="/contact"
+            >Contact</router-link
+          >
         </div>
       </div>
     </div>
@@ -65,9 +71,9 @@ export default {
       long: "",
       weatherData: {
         main: "",
-        weather: ""
+        weather: "",
       },
-      loading: false
+      loading: false,
     };
   },
   watch: {
@@ -78,10 +84,10 @@ export default {
           this.loading = false;
           setTimeout(() => {
             this.loading = true;
-          }, 3000);
+          }, 500);
         }
-      }
-    }
+      },
+    },
   },
   computed: {
     formatData() {
@@ -94,7 +100,7 @@ export default {
       if (this.weatherData && this.weatherData.main) {
         return `http://openweathermap.org/img/wn/${this.weatherData.weather.weather[0].icon}@2x.png`;
       }
-    }
+    },
   },
   methods: {
     async showPosition(position) {
@@ -120,14 +126,14 @@ export default {
       } else {
         alert("Geolocation is not supported by this browser");
       }
-    }
+    },
   },
   async mounted() {
     await this.getLocation();
     setTimeout(() => {
       this.loading = true;
     }, 10000);
-  }
+  },
 };
 </script>
 

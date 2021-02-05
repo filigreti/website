@@ -6,13 +6,19 @@
           <router-link exact-active-class="active-two" to="/">Home</router-link>
         </div>
         <div class="about-it">
-          <router-link ref="about" exact-active-class="active-two" to="/about">About</router-link>
+          <router-link ref="about" exact-active-class="active-two" to="/about"
+            >About</router-link
+          >
         </div>
         <div>
-          <router-link exact-active-class="active-two" to="/projects">Projects</router-link>
+          <router-link exact-active-class="active-two" to="/projects"
+            >Projects</router-link
+          >
         </div>
         <div class="button">
-          <router-link exact-active-class="active-two" to="/contact">Contact</router-link>
+          <router-link exact-active-class="active-two" to="/contact"
+            >Contact</router-link
+          >
         </div>
       </div>
     </div>
@@ -31,26 +37,31 @@
             <div class="letter b">E</div>
           </div>
           <div class="liner">
-            <div style="padding-left:2px" class="letter b">O</div>
+            <div style="padding-left: 2px" class="letter b">O</div>
           </div>
         </div>
       </div>
     </div>
     <div class="about-sect">
       <div class="about-size">
-        <div class="color-names">{{name}}</div>
+        <div class="color-names">{{ name }}</div>
         <div class="about-header">Summary</div>
         <div class="about-header-two">
-          Software Developer with a Bachelor’s degree in computer science and over three years of professional experience as a full-stack web developer.
-          I tend to view myself as a generalist since I am comfortable working with a wide range of technologies.
-          My skills range from HTML, CSS, Node, Javascript(vue.js, react.js and Jquery), and most recently Go.
-          <br />I have been exposed to varieties of technology in my career and consider myself to be very adaptable.
+          Software Developer with a Bachelor’s degree in computer science and
+          over three years of professional experience as a full-stack web
+          developer. I tend to view myself as a generalist since I am
+          comfortable working with a wide range of technologies. My skills range
+          from HTML, CSS, Node, Javascript(vue.js, react.js and Jquery), and
+          most recently Go.
+          <br />I have been exposed to varieties of technology in my career and
+          consider myself to be very adaptable.
           <div class="about-button">
             <a
               class="btns"
               :href="`data:application/pdf;base64,${pdf}`"
               download="Resume.pdf"
-            >Résumé</a>
+              >Résumé</a
+            >
           </div>
         </div>
       </div>
@@ -77,14 +88,14 @@ export default {
       name: "",
       start: "",
       loading: false,
-      pdf: pdf
+      pdf: pdf,
     };
   },
   computed: {
     randomise() {
       this.numberWithCommas(this.random);
       return `linear-gradient(to right,${this.random})`;
-    }
+    },
   },
   methods: {
     numberWithCommas(x) {
@@ -97,12 +108,12 @@ export default {
       let k = randomGradient;
       this.random = [...k.colors];
       this.name = k.name;
-    }
+    },
   },
   mounted() {
     setTimeout(() => {
       this.loading = true;
-    }, 1500);
+    }, 500);
     this.randomStuff();
     if (this.random && !this.start) {
       this.start = setInterval(() => {
@@ -114,12 +125,11 @@ export default {
   },
   destroyed() {
     this.random = "";
-  }
+  },
 };
 </script>
 
-
-<style  scoped>
+<style scoped>
 .about {
   background: #e5e4e5;
   height: 100vh;
